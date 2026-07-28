@@ -1,15 +1,26 @@
-const MEMBERS = ["Alex","Brian","Bryan","Danny","Edwin","Harvey","James","JP","Kevin","Steve","Stewart","Whitney"].map(function(name){return {name:name,paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245};});
+const MEMBERS = [
+  {name:"Alex",paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245,aug31:0,jan10:0},
+  {name:"Brian",paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245,aug31:0,jan10:0},
+  {name:"Bryan",paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245,aug31:0,jan10:0},
+  {name:"Danny",paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245,aug31:0,jan10:0},
+  {name:"Edwin",paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245,aug31:0,jan10:0},
+  {name:"Harvey",paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245,aug31:0,jan10:0},
+  {name:"James",paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245,aug31:0,jan10:0},
+  {name:"JP",paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245,aug31:0,jan10:0},
+  {name:"Kevin",paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245,aug31:0,jan10:0},
+  {name:"Steve",paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245,aug31:0,jan10:0},
+  {name:"Stewart",paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245,aug31:0,jan10:0},
+  {name:"Whitney",paid:0,totalDue:245,status:"Late",pastDue:245,dueNextWeek:245,aug31:0,jan10:0}
+  ];
 
 const FEES = {entry:245,transaction:1.45,secondKeeper:45,autodraft:5};
 
-const WEEKLY = [
-  {date:"Aug 31, 2026",amount:0,total:0},
-  {date:"Sep 7, 2026",amount:49,total:49},
-  {date:"Sep 21, 2026",amount:49,total:98},
-  {date:"Oct 5, 2026",amount:49,total:147},
-  {date:"Oct 19, 2026",amount:49,total:196},
-  {date:"Nov 2, 2026",amount:49,total:245},
-  {date:"Jan 10, 2027 (transaction reconciliation)",amount:0,total:245}
+const WEEKLY_FIXED = [
+  {date:"Sep 7, 2026",amount:49},
+  {date:"Sep 21, 2026",amount:49},
+  {date:"Oct 5, 2026",amount:49},
+  {date:"Oct 19, 2026",amount:49},
+  {date:"Nov 2, 2026",amount:49}
   ];
 
 const RULES = [
