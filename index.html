@@ -1,90 +1,106 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Goonies League</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Goonies League</title>
   <style>
-  :root{--gold:#d4af37;--dark:#0b1220;--panel:#131b2e;--panel2:#1b2540;--text:#eae6da;--muted:#9aa4bf;--late:#c0392b;--ontime:#2e8b57;}
-  *{box-sizing:border-box;}
-body{margin:0;font-family:'Trebuchet MS',Verdana,sans-serif;background:radial-gradient(circle at top,#152238,#070b14 70%);color:var(--text);min-height:100vh;}
-header{text-align:center;padding:36px 16px 18px;}
-header h1{font-size:2.4rem;margin:0;letter-spacing:1px;color:var(--gold);text-shadow:0 0 12px rgba(212,175,55,.5);}
-header p{color:var(--muted);margin:6px 0 0;font-style:italic;}
-nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:10px;}
-nav button{background:var(--panel);border:1px solid #2a3550;color:var(--text);padding:10px 18px;border-radius:999px;cursor:pointer;font-size:.95rem;transition:.2s;}
-nav button:hover{border-color:var(--gold);}
-nav button.active{background:var(--gold);color:#1a1406;font-weight:bold;border-color:var(--gold);}
-main{max-width:1000px;margin:0 auto;padding:10px 16px 60px;}
-.page{display:none;animation:fade .3s ease;}
-.page.active{display:block;}
-@keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:24px;}
-.card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid #2a3550;border-radius:14px;padding:18px;text-align:center;}
-.card .big{font-size:1.6rem;color:var(--gold);font-weight:bold;}
-.card .label{color:var(--muted);font-size:.85rem;margin-top:4px;}
-table{width:100%;border-collapse:collapse;background:var(--panel);border-radius:12px;overflow:hidden;}
-th,td{padding:10px 12px;text-align:left;border-bottom:1px solid #263053;font-size:.92rem;}
-th{background:var(--panel2);color:var(--gold);text-transform:uppercase;font-size:.75rem;letter-spacing:1px;}
-tr:last-child td{border-bottom:none;}
-.tag{padding:3px 10px;border-radius:999px;font-size:.78rem;font-weight:bold;}
-.tag.late{background:rgba(192,57,43,.2);color:#ff8b7a;}
-.tag.ontime{background:rgba(46,139,87,.2);color:#7be3a8;}
-h2.section-title{color:var(--gold);border-bottom:1px solid #2a3550;padding-bottom:8px;margin-top:34px;}
-.rule-card{background:var(--panel);border-left:4px solid var(--gold);border-radius:8px;padding:16px 20px;margin-bottom:16px;}
-.rule-card h3{margin:0 0 8px;color:var(--gold);}
-.rule-card p{white-space:pre-line;color:var(--text);line-height:1.5;margin:0;font-size:.92rem;}
-input#keeperSearch{width:100%;padding:10px 14px;border-radius:8px;border:1px solid #2a3550;background:var(--panel);color:var(--text);margin-bottom:16px;font-size:1rem;}
-.muted{color:var(--muted);font-size:.85rem;margin-top:18px;}
-footer{text-align:center;color:var(--muted);padding:20px;font-size:.8rem;}
-.fee-box{background:var(--panel);border-radius:12px;padding:16px 20px;margin-bottom:24px;}
-.fee-box h3{color:var(--gold);margin-top:0;}
-.fee-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #263053;}
-.fee-row:last-child{border-bottom:none;}
-</style>
+    :root{--gold:#d4af37;--dark:#0b1220;--panel:#131b2e;--panel2:#1b2540;--text:#eae6da;--muted:#9aa4bf;--late:#c0392b;--ontime:#2e8b57;}
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:'Trebuchet MS',Verdana,sans-serif;background:radial-gradient(circle at top,#152238,#070b14 70%);color:var(--text);min-height:100vh;}
+    header{text-align:center;padding:36px 16px 18px;}
+    header h1{font-size:2.4rem;margin:0;letter-spacing:1px;color:var(--gold);text-shadow:0 0 12px rgba(212,175,55,.5);}
+    header p{color:var(--muted);margin:6px 0 0;font-style:italic;}
+    nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:10px;}
+    nav button{background:var(--panel);border:1px solid #2a3550;color:var(--text);padding:10px 18px;border-radius:999px;cursor:pointer;font-size:.95rem;transition:.2s;}
+    nav button:hover{border-color:var(--gold);}
+    nav button.active{background:var(--gold);color:#1a1406;font-weight:bold;border-color:var(--gold);}
+    main{max-width:1000px;margin:0 auto;padding:10px 16px 60px;}
+    .page{display:none;animation:fade .3s ease;}
+    .page.active{display:block;}
+    @keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:24px;}
+    .card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid #2a3550;border-radius:14px;padding:18px;text-align:center;}
+    .card .big{font-size:1.6rem;color:var(--gold);font-weight:bold;}
+    .card .label{color:var(--muted);font-size:.85rem;margin-top:4px;}
+    table{width:100%;border-collapse:collapse;background:var(--panel);border-radius:12px;overflow:hidden;}
+    th,td{padding:10px 12px;text-align:left;border-bottom:1px solid #263053;font-size:.92rem;}
+    th{background:var(--panel2);color:var(--gold);text-transform:uppercase;font-size:.75rem;letter-spacing:1px;}
+    tr:last-child td{border-bottom:none;}
+    .tag{padding:3px 10px;border-radius:999px;font-size:.78rem;font-weight:bold;}
+    .tag.late{background:rgba(192,57,43,.2);color:#ff8b7a;}
+    .tag.ontime{background:rgba(46,139,87,.2);color:#7be3a8;}
+    h2.section-title{color:var(--gold);border-bottom:1px solid #2a3550;padding-bottom:8px;margin-top:34px;}
+    .rule-card{background:var(--panel);border-left:4px solid var(--gold);border-radius:8px;padding:16px 20px;margin-bottom:16px;}
+    .rule-card h3{margin:0 0 8px;color:var(--gold);}
+    .rule-card p{white-space:pre-line;color:var(--text);line-height:1.5;margin:0;font-size:.92rem;}
+    input#keeperSearch{width:100%;padding:10px 14px;border-radius:8px;border:1px solid #2a3550;background:var(--panel);color:var(--text);margin-bottom:16px;font-size:1rem;}
+    .muted{color:var(--muted);font-size:.85rem;margin-top:18px;}
+    footer{text-align:center;color:var(--muted);padding:20px;font-size:.8rem;}
+    .fee-box{background:var(--panel);border-radius:12px;padding:16px 20px;margin-bottom:24px;}
+    .fee-box h3{color:var(--gold);margin-top:0;}
+    .fee-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #263053;}
+    .fee-row:last-child{border-bottom:none;}
+    .photo-section{text-align:center;margin-top:40px;}
+    .photo-section img{max-width:100%;border-radius:16px;border:1px solid #2a3550;box-shadow:0 0 30px rgba(212,175,55,.15);}
+    .photo-section p{color:var(--muted);font-style:italic;margin-top:10px;font-size:.85rem;}
+    </style>
   </head>
   <body>
-  <header>
-  <h1>&#9875; Goonies League &#9875;</h1>
-  <p>Never Say Die &mdash; League Fees, Rules &amp; Lore</p>
-</header>
-<nav>
-<button class="tab-btn active" data-page="dashboard">Dashboard</button>
-<button class="tab-btn" data-page="weekly">Weekly Fees</button>
-  <button class="tab-btn" data-page="rules">Rules &amp; Lore</button>
-  <button class="tab-btn" data-page="keepers">Keepers</button>
+    <header>
+      <h1>&#9875; Goonies League &#9875;</h1>
+    <p>Never Say Die &mdash; League Fees, Rules &amp; Lore</p>
+    </header>
+  <nav>
+    <button class="tab-btn active" data-page="dashboard">Dashboard</button>button>
+    <button class="tab-btn" data-page="weekly">Weekly Fees</button>button>
+    <button class="tab-btn" data-page="rules">Rules &amp; Lore</button>button>
+    <button class="tab-btn" data-page="keepers">Keepers</button>button>
   </nav>
-  <main>
-  <section id="dashboard" class="page active">
-  <div class="cards" id="summaryCards"></div>
-  <div class="fee-box">
-  <h3>League Fees</h3>
-  <div class="fee-row"><span>Entry</span><span id="feeEntry"></span></div>
-  <div class="fee-row"><span>Transaction</span><span id="feeTransaction"></span></div>
-  <div class="fee-row"><span>2nd Keeper</span><span id="feeKeeper"></span></div>
-  <div class="fee-row"><span>Autodraft</span><span id="feeAutodraft"></span></div>
-  </div>
-  <h2 class="section-title">Member Balances</h2>
-  <table id="memberTable"><thead><tr><th>Name</th><th>Status</th><th>Total Due</th><th>Paid</th><th>Past Due</th></tr></thead><tbody></tbody></table>
-  <p class="muted">Balances reflect the 2026 season sheet as of the last sync. Ping the commish to update.</p>
-  </section>
-  <section id="weekly" class="page">
-  <h2 class="section-title">Weekly Fee Schedule</h2>
-<table id="weeklyTable"><thead><tr><th>Due Date</th><th>Installment</th><th>Running Total</th></tr></thead><tbody></tbody></table>
-  <p class="muted">Same schedule applies to every member. Transaction fees reconcile separately on a bi-weekly basis.</p>
-  </section>
-  <section id="rules" class="page">
-  <h2 class="section-title">Rules &amp; Lore</h2>
-  <div id="rulesList"></div>
-  </section>
-  <section id="keepers" class="page">
-  <h2 class="section-title">Keepers</h2>
-  <input id="keeperSearch" type="text" placeholder="Search by player or owner...">
-  <table id="keeperTable"><thead><tr><th>Player</th><th>2023</th><th>2024</th><th>2025</th><th>Owner</th></tr></thead><tbody></tbody></table>
-  </section>
-  </main>
+    <main>
+      <section id="dashboard" class="page active">
+        <div class="cards" id="summaryCards"></div>div>
+        <div class="fee-box">
+          <h3>League Fees</h3>
+          <div class="fee-row"><span>Entry</span><span id="feeEntry"></span></div>div>
+        <div class="fee-row"><span>Transaction</span><span id="feeTransaction"></span></div>div>
+        <div class="fee-row"><span>2nd Keeper</span><span id="feeKeeper"></span></div>div>
+        <div class="fee-row"><span>Autodraft</span><span id="feeAutodraft"></span></div>div>
+        </div>div>
+      <h2 class="section-title">Member Balances</h2>
+      <table id="memberTable"><thead><tr><th>Name</th><th>Status</th><th>Total Due</th><th>Paid</th><th>Past Due</th></tr></thead><tbody></tbody></table>table>
+      <p class="muted">Balances reflect the 2026 season sheet as of the last sync. Ping the commish to update.</p>
+      <div class="photo-section">
+      <img src="group.jpg" alt="Goonies League group photo" onerror="this.parentElement.style.display='none'">
+      <p>The Goonies League &mdash; Never Say Die</p>
+      </div>div>
+      </section>section>
+    <section id="weekly" class="page">
+    <h2 class="section-title">Weekly Fee Schedule</h2>
+    <table id="weeklyTable"><thead><tr><th>Due Date</th><th>Installment</th><th>Running Total</th></tr></thead><tbody></tbody></table>table>
+    <p class="muted">These 5 installments are the same for everyone. Aug 31 and Jan 10 vary per member below.</p>
+    <h2 class="section-title">Member-Specific Charges</h2>
+    <table id="variableTable"><thead><tr><th>Name</th><th>Aug 31 (Keeper/Autodraft)</th><th>Jan 10 (Transactions)</th><th>Season Total</th></tr></thead><tbody></tbody></table>table>
+    <p class="muted">Aug 31 = 2nd keeper fee ($45, if applicable) + autodraft picks ($5 each). Jan 10 = accumulated transaction fees ($1.45 each) for the season.</p>
+    </section>section>
+    <section id="rules" class="page">
+    <h2 class="section-title">Rules &amp; Lore</h2>
+    <div id="rulesList"></div>div>
+    </section>section>
+    <section id="keepers" class="page">
+    <h2 class="section-title">Keepers</h2>
+    <input id="keeperSearch" type="text" placeholder="Search by player or owner...">
+    <table id="keeperTable"><thead><tr><th>Player</th><th>2023</th><th>2024</th><th>2025</th><th>Owner</th></tr></thead><tbody></tbody></table>table>
+    </section>section>
+    </main>
   <footer>Goonies League Dashboard &bull; built with treasure and spite</footer>
   <script src="data.js"></script>
   <script src="app.js"></script>
   </body>
-  </html>
+</html>html></footer></tbody></th></th></tr></tbody></th></th></tr></tbody></th></th></tr></p></tbody></th></th></tr></thead></span></span>
+    </main>
+  </nav></p></h1>
+    </header>
+  </body>
+  </style></title>
+  </head>
