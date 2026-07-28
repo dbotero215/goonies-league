@@ -25,8 +25,17 @@ var tbody = document.querySelector("#memberTable tbody");
 
 function renderWeekly(){
   var tbody = document.querySelector("#weeklyTable tbody");
-  tbody.innerHTML = WEEKLY.map(function(w){
-    return "<tr><td>" + w.date + "</td><td>" + money(w.amount) + "</td><td>" + money(w.total) + "</td></tr>";
+  var runningBase = 0;
+  tbody.innerHTML = WEEKLY_FIXED.map(function(w){
+    runningBase += w.amount;
+    return "<tr><td>" + w.date + "</td><td>" + money(w.amount) + "</td><td>" + money(runningBase) + "</td></tr>";
+  }).join("");
+
+var vtbody = document.querySelector("#variableTable tbody");
+  var fixedTotal = WEEKLY_FIXED.reduce(function(a,w){return a+w.amount;},0);
+  vtbody.innerHTML = MEMBERS.map(function(m){
+    var total = m.aug31 + fixedTotal + m.jan10;
+    return "<tr><td>" + m.name + "</td><td>" + money(m.aug31) + "</td><td>" + money(m.jan10) + "</td><td>" + money(total) + "</td></tr>";
   }).join("");
 }
 
