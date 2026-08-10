@@ -55,8 +55,12 @@ var f = (filter || "").toLowerCase();
 var rows = KEEPERS.filter(function(k){
 return k.player.toLowerCase().indexOf(f) !== -1 || k.owner.toLowerCase().indexOf(f) !== -1;
 });
+function cell(v){
+if (v === "Ineligible") return "<span class=\"ineligible\">Ineligible</span>";
+return v || "&mdash;";
+}
 tbody.innerHTML = rows.map(function(k){
-return "<tr><td>" + k.player + "</td><td>" + (k.y2023||"&mdash;") + "</td><td>" + (k.y2024||"&mdash;") + "</td><td>" + (k.y2025||"&mdash;") + "</td><td>" + (k.owner||"&mdash;") + "</td></tr>";
+return "<tr><td>" + k.player + "</td><td>" + cell(k.y2024) + "</td><td>" + cell(k.y2025) + "</td><td>" + cell(k.y2026) + "</td><td>" + (k.owner||"&mdash;") + "</td></tr>";
 }).join("");
 }
 
