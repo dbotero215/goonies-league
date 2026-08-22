@@ -1,7 +1,7 @@
 const MEMBERS = [
 {name:"Alex",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Brian",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Bryan",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
+{name:"Bryan",paid:98.50,totalDue:156.50,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Danny",paid:255,totalDue:0,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Edwin",paid:225,totalDue:30,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Harvey",paid:100,totalDue:155,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
@@ -36,7 +36,7 @@ const RULES = [
 ];
 
 const KEEPERS = [
-{player:"P. Nacua - WR",y2024:"x",y2025:"x - 4",y2026:"Ineligible",owner:"Alex"},
+{player:"P. Nacua - WR",y2024:"",y2025:"x - 4",y2026:"Ineligible",owner:"Alex"},
 {player:"M. Nabers - WR",y2024:"",y2025:"x - 5",y2026:"",owner:"Alex"},
 {player:"B. Bowers - TE",y2024:"",y2025:"x - 6",y2026:"",owner:"Brian"},
 {player:"B. Thomas Jr - WR",y2024:"",y2025:"x - 7",y2026:"",owner:"Bryan"},
@@ -46,11 +46,11 @@ const KEEPERS = [
 {player:"L. McConkey - WR",y2024:"",y2025:"x - 8",y2026:"",owner:"Edwin"},
 {player:"J. Downs - WR",y2024:"",y2025:"x - 7",y2026:"",owner:"Harvey"},
 {player:"C. Hubbard - RB",y2024:"",y2025:"x - 10",y2026:"",owner:"James"},
-{player:"J. Warren - RB",y2024:"x",y2025:"x-8",y2026:"Ineligible",owner:"JP"},
+{player:"J. Warren - RB",y2024:"",y2025:"x-8",y2026:"Ineligible",owner:"JP"},
 {player:"C. Ridley - WR",y2024:"",y2025:"x - 5",y2026:"",owner:"JP"},
 {player:"C. Brown - RB",y2024:"",y2025:"x - 6",y2026:"",owner:"Kevin"},
 {player:"T. Hockenson - TE",y2024:"",y2025:"x - 10",y2026:"",owner:"Kevin"},
-{player:"D. Achane - RB",y2024:"x",y2025:"x - 4",y2026:"Ineligible",owner:"Steve"},
+{player:"D. Achane - RB",y2024:"",y2025:"x - 4",y2026:"Ineligible",owner:"Steve"},
 {player:"J. Addison - WR",y2024:"",y2025:"x - 10",y2026:"",owner:"Stewart"},
 {player:"J. Smith-Njigba - WR",y2024:"",y2025:"x - 7",y2026:"",owner:"Whitney"},
 {player:"J. Dobbins - RB",y2024:"",y2025:"x - 9",y2026:"",owner:"Whitney"}
