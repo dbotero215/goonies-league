@@ -60,7 +60,7 @@ if (v === "Ineligible") return "<span class=\"ineligible\">Ineligible</span>";
 return v || "&mdash;";
 }
 tbody.innerHTML = rows.map(function(k){
-return "<tr><td>" + k.player + "</td><td>" + cell(k.y2024) + "</td><td>" + cell(k.y2025) + "</td><td>" + cell(k.y2026) + "</td><td>" + (k.owner||"&mdash;") + "</td></tr>";
+return "<tr><td>" + k.player + "</td><td>" + cell(k.y2025) + "</td><td>" + cell(k.y2026) + "</td><td>" + (k.owner||"&mdash;") + "</td></tr>";
 }).join("");
 }
 
