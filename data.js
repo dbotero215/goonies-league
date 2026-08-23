@@ -42,7 +42,7 @@ const KEEPERS = [
 {player:"T. McMillan - WR",y2025:"",y2026:"Round 4",owner:"James"},
 {player:"J. Smith-Njigba - WR",y2025:"",y2026:"Round 4",owner:"Whitney"},
 {player:"E. Egbuka - WR",y2025:"",y2026:"Round 5",owner:"Stewart"},
-{player:"C. Skattebo",y2025:"",y2026:"Round 5",owner:"Bryan"},
+{player:"C. Skattebo",y2025:"",y2026:"Round 3",owner:"Bryan"},
 {player:"T. Kraft - TE",y2025:"",y2026:"Round 6",owner:"Kevin"},
 {player:"R. Stevenson - RB",y2025:"",y2026:"Round 6",owner:"Bryan"},
 {player:"C. Loveland - TE",y2025:"",y2026:"Round 7",owner:"Alex"},
