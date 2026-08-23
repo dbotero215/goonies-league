@@ -1,5 +1,5 @@
 const MEMBERS = [
-{name:"Alex",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
+{name:"Alex",paid:255,totalDue:0,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Brian",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Bryan",paid:98.50,totalDue:156.50,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Danny",paid:255,totalDue:0,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
@@ -36,22 +36,17 @@ const RULES = [
 ];
 
 const KEEPERS = [
-{player:"P. Nacua - WR",y2024:"",y2025:"x - 4",y2026:"Ineligible",owner:"Alex"},
-{player:"M. Nabers - WR",y2024:"",y2025:"x - 5",y2026:"",owner:"Alex"},
-{player:"B. Bowers - TE",y2024:"",y2025:"x - 6",y2026:"",owner:"Brian"},
-{player:"B. Thomas Jr - WR",y2024:"",y2025:"x - 7",y2026:"",owner:"Bryan"},
-{player:"C. Sutton - WR",y2024:"",y2025:"x - 9",y2026:"",owner:"Danny"},
-{player:"T. Higgins - WR",y2024:"",y2025:"x - 4",y2026:"",owner:"Danny"},
-{player:"B. Irving - RB",y2024:"",y2025:"x - 7",y2026:"",owner:"Edwin"},
-{player:"L. McConkey - WR",y2024:"",y2025:"x - 8",y2026:"",owner:"Edwin"},
-{player:"J. Downs - WR",y2024:"",y2025:"x - 7",y2026:"",owner:"Harvey"},
-{player:"C. Hubbard - RB",y2024:"",y2025:"x - 10",y2026:"",owner:"James"},
-{player:"J. Warren - RB",y2024:"",y2025:"x-8",y2026:"Ineligible",owner:"JP"},
-{player:"C. Ridley - WR",y2024:"",y2025:"x - 5",y2026:"",owner:"JP"},
-{player:"C. Brown - RB",y2024:"",y2025:"x - 6",y2026:"",owner:"Kevin"},
-{player:"T. Hockenson - TE",y2024:"",y2025:"x - 10",y2026:"",owner:"Kevin"},
-{player:"D. Achane - RB",y2024:"",y2025:"x - 4",y2026:"Ineligible",owner:"Steve"},
-{player:"J. Addison - WR",y2024:"",y2025:"x - 10",y2026:"",owner:"Stewart"},
-{player:"J. Smith-Njigba - WR",y2024:"",y2025:"x - 7",y2026:"",owner:"Whitney"},
-{player:"J. Dobbins - RB",y2024:"",y2025:"x - 9",y2026:"",owner:"Whitney"}
+{player:"B. Bowers - TE",y2025:"",y2026:"Round 3",owner:"Brian"},
+{player:"C. Brown - RB",y2025:"",y2026:"Round 3",owner:"Kevin"},
+{player:"Q. Judkins - RB",y2025:"",y2026:"Round 4",owner:"Steve"},
+{player:"T. McMillan - WR",y2025:"",y2026:"Round 4",owner:"James"},
+{player:"J. Smith-Njigba - WR",y2025:"",y2026:"Round 4",owner:"Whitney"},
+{player:"E. Egbuka - WR",y2025:"",y2026:"Round 5",owner:"Stewart"},
+{player:"C. Skattebo",y2025:"",y2026:"Round 5",owner:"Bryan"},
+{player:"T. Kraft - TE",y2025:"",y2026:"Round 6",owner:"Kevin"},
+{player:"R. Stevenson - RB",y2025:"",y2026:"Round 6",owner:"Bryan"},
+{player:"C. Loveland - TE",y2025:"",y2026:"Round 7",owner:"Alex"},
+{player:"T. Warren - TE",y2025:"",y2026:"Round 7",owner:"Harvey"},
+{player:"B. Corum - RB",y2025:"",y2026:"Round 12",owner:"Edwin"},
+{player:"B. Tuten - RB",y2025:"",y2026:"Round 11",owner:"Edwin"}
 ];
