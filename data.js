@@ -8,7 +8,7 @@ const MEMBERS = [
 {name:"James",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"JP",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Kevin",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Steve",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
+{name:"Steve",paid:60,totalDue:195,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Stewart",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Whitney",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0}
 ];
