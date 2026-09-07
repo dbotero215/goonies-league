@@ -1,16 +1,16 @@
 const MEMBERS = [
-{name:"Alex",paid:255,totalDue:0,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Brian",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Bryan",paid:98.50,totalDue:156.50,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Danny",paid:255,totalDue:0,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Edwin",paid:225,totalDue:30,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Harvey",paid:100,totalDue:155,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"James",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"JP",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Kevin",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Steve",paid:60,totalDue:195,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Stewart",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Whitney",paid:0,totalDue:255,status:"N/A",pastDue:0,dueNextWeek:0,aug31:0,jan10:0}
+{name:"Alex",paid:255,totalDue:0,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
+{name:"Brian",paid:0,totalDue:255,status:"On-Time",pastDue:0,dueNextWeek:51,aug31:0,jan10:0},
+{name:"Bryan",paid:98.5,totalDue:204,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
+{name:"Danny",paid:255,totalDue:0,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
+{name:"Edwin",paid:225,totalDue:77.5,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
+{name:"Harvey",paid:100,totalDue:155,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
+{name:"James",paid:0,totalDue:280,status:"Late",pastDue:25,dueNextWeek:76,aug31:0,jan10:0},
+{name:"JP",paid:0,totalDue:255,status:"On-Time",pastDue:0,dueNextWeek:51,aug31:0,jan10:0},
+{name:"Kevin",paid:0,totalDue:302.5,status:"Late",pastDue:47.5,dueNextWeek:98.5,aug31:0,jan10:0},
+{name:"Steve",paid:60,totalDue:195,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
+{name:"Stewart",paid:0,totalDue:255,status:"On-Time",pastDue:0,dueNextWeek:51,aug31:0,jan10:0},
+{name:"Whitney",paid:0,totalDue:255,status:"On-Time",pastDue:0,dueNextWeek:51,aug31:0,jan10:0}
 ];
 
 const FEES = {entry:255,transaction:1.50,secondKeeper:47.50,autodraft:5};
