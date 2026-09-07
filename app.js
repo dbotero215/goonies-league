@@ -4,6 +4,17 @@ function renderDashboard(){
 var cards = document.getElementById("summaryCards");
 var lastSyncedEl = document.getElementById("lastSynced");
 if (lastSyncedEl) { lastSyncedEl.textContent = LAST_SYNCED; }
+var nextDueEl = document.getElementById("nextDueDate");
+if (nextDueEl) {
+var today = new Date();
+var plus7 = new Date(today.getTime() + 7*24*60*60*1000);
+var nd = null;
+for (var i = DUE_MILESTONES.length - 1; i >= 0; i--) {
+var mDate = new Date(DUE_MILESTONES[i] + "T00:00:00");
+if (plus7 > mDate) { nd = mDate; break; }
+}
+nextDueEl.textContent = nd ? nd.toLocaleDateString("en-US", {month:"long", day:"numeric", year:"numeric"}) : "TBD";
+}
 var totalDue = MEMBERS.reduce(function(a,m){return a+m.totalDue;},0);
 var totalPaid = MEMBERS.reduce(function(a,m){return a+m.paid;},0);
 var lateCount = MEMBERS.filter(function(m){return m.status==="Late";}).length;
