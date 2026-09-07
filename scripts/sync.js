@@ -38,21 +38,23 @@ async function main() {
   const datesData = await fetchRange('O22:U22');
   const milestones = datesData.table.rows[0].c.map(function(c) { return serialToISO(c.v); });
 
+  const detailsData = await fetchRange('A24:L35');
+  const detailsByName = {};
+  detailsData.table.rows.forEach(function(r) {
+    const c = r.c;
+    const name = (c[0] && c[0].v) ? String(c[0].v) : '';
+    if (!name) return;
+    detailsByName[name] = {
+      aug31: (c[5] && typeof c[5].v === 'number') ? c[5].v : 0,
+      jan10: (c[11] && typeof c[11].v === 'number') ? c[11].v : 0
+    };
+  });
+
   const dataJsPath = path.join(__dirname, '..', 'data.js');
   let content = fs.readFileSync(dataJsPath, 'utf8');
 
-  const oldMembersMatch = content.match(/const MEMBERS = \[([\s\S]*?)\];/);
-  const oldExtras = {};
-  if (oldMembersMatch) {
-    const re = /\{name:"([^"]+)",[^}]*aug31:([\d.]+),jan10:([\d.]+)\}/g;
-    let m;
-    while ((m = re.exec(oldMembersMatch[1]))) {
-      oldExtras[m[1]] = { aug31: m[2], jan10: m[3] };
-    }
-  }
-
   const membersStr = members.map(function(m) {
-    const extra = oldExtras[m.name] || { aug31: '0', jan10: '0' };
+    const extra = detailsByName[m.name] || { aug31: 0, jan10: 0 };
     return '{name:"' + m.name + '",paid:' + m.paid + ',totalDue:' + m.totalDue + ',status:"' + m.status + '",pastDue:' + m.pastDue + ',dueNextWeek:' + m.dueNextWeek + ',aug31:' + extra.aug31 + ',jan10:' + extra.jan10 + '}';
   }).join(',\n');
 
