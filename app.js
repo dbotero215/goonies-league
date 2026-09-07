@@ -2,6 +2,8 @@ function money(n){return "$" + Number(n).toFixed(2);}
 
 function renderDashboard(){
 var cards = document.getElementById("summaryCards");
+var lastSyncedEl = document.getElementById("lastSynced");
+if (lastSyncedEl) { lastSyncedEl.textContent = LAST_SYNCED; }
 var totalDue = MEMBERS.reduce(function(a,m){return a+m.totalDue;},0);
 var totalPaid = MEMBERS.reduce(function(a,m){return a+m.paid;},0);
 var lateCount = MEMBERS.filter(function(m){return m.status==="Late";}).length;
