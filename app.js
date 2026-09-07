@@ -22,10 +22,11 @@ var tagClass = m.status === "Late" ? "late" : "ontime";
 var dueClass = m.totalDue > 0 ? "amt-due" : "";
 var paidClass = m.paid > 0 ? "amt-paid" : "";
 var pastDueHtml = m.pastDue > 0 ? "<span class='amt-pastdue'>" + money(m.pastDue) + "</span>" : money(m.pastDue);
-return "<tr><td>" + m.name + "</td><td><span class=\"tag " + tagClass + "\">" + m.status + "</span></td><td class=\"" + dueClass + "\">" + money(m.totalDue) + "</td><td class=\"" + paidClass + "\">" + money(m.paid) + "</td><td>" + pastDueHtml + "</td></tr>";
+var dueNextWeekHtml = m.dueNextWeek > 0 ? "<span class='amt-duesoon'>" + money(m.dueNextWeek) + "</span>" : money(m.dueNextWeek);
+var rowClass = m.pastDue > 0 ? "row-alert" : (m.dueNextWeek > 0 ? "row-duesoon" : "");
+return "<tr class='" + rowClass + "'><td>" + m.name + "</td><td><span class='tag " + tagClass + "'>" + m.status + "</span></td><td class='" + dueClass + "'>" + money(m.totalDue) + "</td><td class='" + paidClass + "'>" + money(m.paid) + "</td><td>" + pastDueHtml + "</td><td>" + dueNextWeekHtml + "</td></tr>";
 }).join("");
 }
-
 function renderWeekly(){
 var tbody = document.querySelector("#weeklyTable tbody");
 var runningBase = 0;
