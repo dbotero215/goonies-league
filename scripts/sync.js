@@ -12,6 +12,10 @@ async function fetchRange(range) {
 }
 
 function serialToISO(serial) {
+  if (typeof serial === 'string' && serial.indexOf('Date(') === 0) {
+    const parts = serial.slice(5, -1).split(',').map(Number);
+    return new Date(Date.UTC(parts[0], parts[1], parts[2])).toISOString().slice(0, 10);
+  }
   const ms = Date.UTC(1899, 11, 30) + serial * 86400000;
   return new Date(ms).toISOString().slice(0, 10);
 }
