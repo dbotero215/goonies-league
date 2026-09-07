@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Goonies League</title>
 <style>
-:root{--gold:#d4af37;--dark:#0b1220;--panel:#131b2e;--panel2:#1b2540;--text:#eae6da;--muted:#9aa4bf;--late:#c0392b;--ontime:#2e8b57;}
+:root{--gold:#d4af37;--dark:#0b1220;--panel:#131b2e;--panel2:#1b2540;--text:#eae6da;--muted:#9aa4bf;--late:#c0392b;--ontime:#2e8b57;--duesoon:#d99a2b;}
 *{box-sizing:border-box;}
 body{margin:0;font-family:'Trebuchet MS',Verdana,sans-serif;background:radial-gradient(circle at top,#152238,#070b14 70%);color:var(--text);min-height:100vh;}
 header{text-align:center;padding:36px 16px 18px;}
@@ -34,6 +34,9 @@ tr:last-child td{border-bottom:none;}
 .amt-due{color:#ff8b7a;font-weight:700;}
 .amt-paid{color:#7be3a8;font-weight:700;}
 .amt-pastdue{background:var(--late);color:#fff;font-weight:800;padding:3px 10px;border-radius:6px;box-shadow:0 0 10px rgba(192,57,43,.6);}
+.amt-duesoon{background:var(--duesoon);color:#1b2540;font-weight:800;padding:3px 10px;border-radius:6px;box-shadow:0 0 10px rgba(217,154,43,.6);}
+tr.row-alert{background:rgba(192,57,43,.14);}
+tr.row-duesoon{background:rgba(217,154,43,.14);}
 .ineligible{background:var(--late);color:#fff;font-weight:800;padding:3px 10px;border-radius:6px;box-shadow:0 0 10px rgba(192,57,43,.6);display:inline-block;}
 h2.section-title{color:var(--gold);border-bottom:1px solid #2a3550;padding-bottom:8px;margin-top:34px;}
 .rule-card{background:var(--panel);border-left:4px solid var(--gold);border-radius:8px;padding:16px 20px;margin-bottom:16px;}
@@ -73,7 +76,7 @@ footer{text-align:center;color:var(--muted);padding:20px;font-size:.8rem;}
 <div class="fee-row"><span>Autodraft</span><span id="feeAutodraft"></span></div>
 </div>
 <h2 class="section-title">Member Balances</h2>
-<table id="memberTable"><thead><tr><th>Name</th><th>Status</th><th>Total Due</th><th>Paid</th><th>Past Due</th></tr></thead><tbody></tbody></table>
+<table id="memberTable"><thead><tr><th>Name</th><th>Status</th><th>Total Due</th><th>Paid</th><th>Past Due</th><th>Due Next Week</th></tr></thead><tbody></tbody></table>
 <p class="muted">Balances reflect the 2026 season sheet as of the last sync. Ping the commish to update.</p>
 <div class="photo-section">
 <img src="group.jpg" alt="Goonies League group photo" onerror="this.parentElement.style.display='none'">
