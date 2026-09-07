@@ -1,3 +1,5 @@
+const LAST_SYNCED = "September 7, 2026";
+
 const MEMBERS = [
 {name:"Alex",paid:255,totalDue:0,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Brian",paid:0,totalDue:255,status:"On-Time",pastDue:0,dueNextWeek:51,aug31:0,jan10:0},
