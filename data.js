@@ -1,4 +1,6 @@
-const LAST_SYNCED = "September 7, 2026";
+const LAST_SYNCED = "September 7, 2026 at 9:35 AM";
+
+const DUE_MILESTONES = ["2026-08-31","2026-09-07","2026-09-21","2026-10-05","2026-10-19","2026-11-02","2027-01-10"];
 
 const MEMBERS = [
 {name:"Alex",paid:255,totalDue:0,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
