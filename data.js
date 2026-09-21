@@ -1,4 +1,4 @@
-const LAST_SYNCED = "September 20, 2026 at 9:45 AM PT";
+const LAST_SYNCED = "September 21, 2026 at 11:37 AM PT";
 
 const DUE_MILESTONES = ["2026-08-31","2026-09-07","2026-09-21","2026-10-05","2026-10-19","2026-11-02","2027-01-10"];
 
@@ -14,7 +14,7 @@ const MEMBERS = [
 {name:"Kevin",paid:120,totalDue:182.5,status:"On-Time",pastDue:0,dueNextWeek:29.5,aug31:47.5,jan10:0},
 {name:"Steve",paid:115,totalDue:140,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Stewart",paid:51,totalDue:204,status:"On-Time",pastDue:0,dueNextWeek:51,aug31:0,jan10:0},
-{name:"Whitney",paid:51,totalDue:204,status:"On-Time",pastDue:0,dueNextWeek:51,aug31:0,jan10:0}
+{name:"Whitney",paid:102,totalDue:153,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0}
 ];
 
 const FEES = {entry:255,transaction:1.50,secondKeeper:47.50,autodraft:5};
