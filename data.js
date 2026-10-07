@@ -1,10 +1,10 @@
-const LAST_SYNCED = "October 6, 2026 at 11:52 AM PT";
+const LAST_SYNCED = "October 6, 2026 at 8:58 PM PT";
 
 const DUE_MILESTONES = ["2026-08-31","2026-09-07","2026-09-21","2026-10-05","2026-10-19","2026-11-02","2027-01-10"];
 
 const MEMBERS = [
 {name:"Alex",paid:255,totalDue:0,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Brian",paid:110,totalDue:145,status:"Late",pastDue:43,dueNextWeek:43,aug31:0,jan10:0},
+{name:"Brian",paid:230,totalDue:25,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Bryan",paid:251.5,totalDue:51,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:47.5,jan10:0},
 {name:"Danny",paid:255,totalDue:0,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Edwin",paid:225,totalDue:77.5,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:47.5,jan10:0},
@@ -14,7 +14,7 @@ const MEMBERS = [
 {name:"Kevin",paid:220,totalDue:82.5,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:47.5,jan10:0},
 {name:"Steve",paid:255,totalDue:0,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Stewart",paid:153,totalDue:102,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Whitney",paid:102,totalDue:153,status:"Late",pastDue:51,dueNextWeek:51,aug31:0,jan10:0}
+{name:"Whitney",paid:153,totalDue:102,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0}
 ];
 
 const FEES = {entry:255,transaction:1.50,secondKeeper:47.50,autodraft:5};
