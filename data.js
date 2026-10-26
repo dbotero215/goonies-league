@@ -1,4 +1,4 @@
-const LAST_SYNCED = "October 25, 2026 at 10:01 AM PT";
+const LAST_SYNCED = "October 26, 2026 at 12:10 PM PT";
 
 const DUE_MILESTONES = ["2026-08-31","2026-09-07","2026-09-21","2026-10-05","2026-10-19","2026-11-02","2027-01-10"];
 
