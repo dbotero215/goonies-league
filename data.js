@@ -1,4 +1,4 @@
-const LAST_SYNCED = "November 7, 2026 at 9:59 AM PT";
+const LAST_SYNCED = "November 8, 2026 at 7:23 AM PT";
 
 const DUE_MILESTONES = ["2026-08-31","2026-09-07","2026-09-21","2026-10-05","2026-10-19","2026-11-02","2027-01-10"];
 
@@ -7,7 +7,7 @@ const MEMBERS = [
 {name:"Brian",paid:255.69,totalDue:-0.6899999999999977,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
 {name:"Bryan",paid:302.5,totalDue:0,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:47.5,jan10:0},
 {name:"Danny",paid:255,totalDue:0,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
-{name:"Edwin",paid:251.5,totalDue:51,status:"Late",pastDue:51,dueNextWeek:51,aug31:47.5,jan10:0},
+{name:"Edwin",paid:302.5,totalDue:0,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:47.5,jan10:0},
 {name:"Harvey",paid:204,totalDue:51,status:"Late",pastDue:51,dueNextWeek:51,aug31:0,jan10:0},
 {name:"James",paid:280,totalDue:0,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:25,jan10:0},
 {name:"JP",paid:256.38,totalDue:-1.3799999999999955,status:"On-Time",pastDue:0,dueNextWeek:0,aug31:0,jan10:0},
